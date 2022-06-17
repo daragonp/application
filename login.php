@@ -15,9 +15,17 @@ session_start();
             $_SESSION['email']      =       $fila['email'];
             $_SESSION['fullname']   =       $fila['fullname'];
             $_SESSION['role']       =       $fila['role'];
-            $_SESSION['id']         =       $fila['id'];
             
             echo "Ha iniciado sesión";
+            echo "<br>";
+            echo $_SESSION['email'];
+            echo "<br>";
+            echo $_SESSION['fullname'];
+            echo "<br>";
+            echo $_SESSION['role'];
+            echo "<br>";
+            echo $_SESSION['id'];
+            echo "<br>";
         }else{
             echo "Verifique los datos";
         }

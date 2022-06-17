@@ -1,3 +1,12 @@
+<?php 
+    include "conexion.php";
+    include "nowarning.php";
+    /* if(session_start()){
+        header('Location: dashboard.php');
+    }else{
+        header('Location: index.php');
+    } */
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,5 +43,28 @@
 
         </div>
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?php if($conectar){
+        echo "<script type='text/javascript'>
+                swal({
+                    title: '¡Bienvenido!',
+                    text: 'Este sistema está en desarrollo.',
+                    icon: 'success',
+                    button: 'ACEPTAR',
+                });
+            </script>";
+    }else{
+        echo "<script type='text/javascript'>
+                swal({
+                    title: '¡Error de conexión!',
+                    text: 'No hay conexión con la base de datos; por favor, contacte al administrador, puesto que si persiste el error, nada de lo que haga en este sistema, será guardado',
+                    icon: 'warning',
+                    button: 'ACEPTAR',
+                });
+            </script>";
+            //mysqli_close($conectar);
+    }
+    
+    ?>    
 </body>
 </html>

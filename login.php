@@ -4,7 +4,6 @@ session_start();
     if(isset($_POST['login'])){
         $email          = $_REQUEST['email'];
         $password       = $_REQUEST['password'];
-        $role           = $_REQUEST['role'];
 
         $consulta   = "SELECT * FROM users WHERE email='$email'";
         //var_dump($consulta);

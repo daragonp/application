@@ -7,7 +7,10 @@ if (isset($_POST['login'])){
     $email                  =           $_REQUEST['email'];
     $password               =           $_REQUEST['password'];
     $repassword             =           $_REQUEST['repassword'];
-    $role                   =           $_REQUEST['role'];
+    $role                   =           'USER';
+     /* ADMIN
+        USER
+        SUPPORT*/
     $encriptarpassword      =           password_hash($password, PASSWORD_DEFAULT);
     if($password==$repassword){
         

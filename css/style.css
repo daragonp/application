@@ -1,0 +1,27 @@
+body{
+    overflow-x: hidden;
+}
+form{
+    width: auto;
+}
+hr{
+    border: 2px;
+    color: #ff6600;
+}
+
+img{
+    display:block;
+    margin:auto;
+    }
+
+.btncolor{
+    background-color: rgb(0, 191, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: none;
+    font-display: auto;
+    color: white;
+}
+
+.iconcolor{
+    color:#ff6600;
+}

@@ -1,0 +1,10 @@
+CREATE TABLE users(
+    id INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(64) NOT NULL,
+    email VARCHAR(64) NOT NULL UNIQUE,
+    password VARCHAR(64) NOT NULL,
+    role VARCHAR(20) NOT NULL UNIQUE,
+    usercreatedat DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    userupdatedat DATETIME NOT NULL,
+    userdeletedat DATETIME
+);

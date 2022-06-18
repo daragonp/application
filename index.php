@@ -1,11 +1,10 @@
 <?php 
     include "conexion.php";
     include "nowarning.php";
-    /* if(session_start()){
-        header('Location: dashboard.php');
-    }else{
-        header('Location: index.php');
-    } */
+    session_start();
+        if (isset($_SESSION['userid']) && isset($_SESSION['fullname'])) {
+            header('Location: dashboard.php');
+        }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,10 +12,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include "favicon.html"; ?>
+    <a href="favicon.htm|"></a>
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="css/style.css">
-        <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/71f1c28685.js" crossorigin="anonymous"></script>
 </head>

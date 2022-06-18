@@ -7,7 +7,6 @@
     <title>Verificación de datos</title>
 </head>
 <body>
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
@@ -26,21 +25,35 @@ include "nowarning.php";
         $filas      = mysqli_num_rows($resultado);
         if(password_verify($password, $fila['password']) && $filas==1){
             session_start();
-            $_SESSION['userid']         =       $fila['userid'];
-            $_SESSION['email']      =       $fila['email'];
-            $_SESSION['fullname']   =       $fila['fullname'];
-            $_SESSION['role']       =       $fila['role'];
+            $_SESSION['userid']             =       $fila['userid'];
+            $_SESSION['email']              =       $fila['email'];
+            $_SESSION['fullname']           =       $fila['fullname'];
+            $_SESSION['role']               =       $fila['role'];
+            $_SESSION['usercreatedat']      =       $fila['usercreatedat'];
             
-            echo "Ha iniciado sesión";
-            echo "<br>";
-            echo $_SESSION['email'];
-            echo "<br>";
-            echo $_SESSION['fullname'];
-            echo "<br>";
-            echo $_SESSION['role'];
-            echo "<br>";
-            echo $_SESSION['userid'];
-            echo "<br>";
+            /*echo "<script type='text/javascript'>
+                    let timerInterval
+                        Swal.fire({
+                        title: 'Redirección',
+                        html: 'Redirigiendo...',
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading()
+                            const b = Swal.getHtmlContainer().querySelector('b')
+                            timerInterval = setInterval(() => {
+                            b.textContent = Swal.getTimerLeft()
+                            }, 100)
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval)
+                        }
+                        }).then(function() {
+                            window.location = 'dashboard.php';
+                        });
+                    </script>";*/
+            header("Location: dashboard.php");
+            exit();
         }else{
             echo "<script type='text/javascript'>
                 swal({

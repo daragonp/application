@@ -14,9 +14,10 @@
 
 <?php
 session_start();
-if (session_destroy()){
-
-  echo "<script type='text/javascript'>
+$_SESSION = array();
+session_unset();
+session_destroy();
+echo "<script type='text/javascript'>
     swal({
         title: 'Salir',
         text: 'La sesión ha sido cerrada',
@@ -26,5 +27,4 @@ if (session_destroy()){
         window.location = 'index.php';
     });
 </script>";
-}
 ?>

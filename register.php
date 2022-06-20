@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Registro</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include "favicon.html"?>
     <?php include "styles.php"?>
-    <title>Registro</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>   
 </head>
 <body>
     <div class="row">
@@ -14,7 +15,10 @@
 
         </div>
         <div class="col-8" style="margin-top: 20px;">
-            <form action="createuser.php" method="post" class="form-group">
+            <button style="float: right;" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <i class="fa-solid fa-question"></i>
+            </button>
+            <form action="userregister.php" method="post" class="form-group">
                 <p style="text-align: center; font-size: 22px;">Registro de usuario</p>
                 <img src="img/logodummy.png" alt="" width="100px;">
                 <hr>
@@ -32,6 +36,22 @@
         </div>
         <div class="col-2">
 
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Instrucciones para registro en el sistema</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Esta es la forma de registrarse en el sistema...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
         </div>
     </div>
 </body>

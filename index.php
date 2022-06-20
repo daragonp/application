@@ -43,16 +43,7 @@
         </div>
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <?php if($conectar){
-        echo "<script type='text/javascript'>
-                swal({
-                    title: '¡Bienvenido!',
-                    text: 'Este sistema está en desarrollo.',
-                    icon: 'success',
-                    button: 'ACEPTAR',
-                });
-            </script>";
-    }else{
+    <?php if(!$conectar){
         echo "<script type='text/javascript'>
                 swal({
                     title: '¡Error de conexión!',
@@ -76,10 +67,10 @@
             Esta es la forma de acceder al sistema...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
         </div>
-  </div>
+    </div>
 </body>
 </html>

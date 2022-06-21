@@ -11,7 +11,7 @@ session_start();
             <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
                 <li><img src='img/users/admin.png' width='180px' alt='Imagen de usuario'></li>
                 <hr>
-                <li><a class='dropdown-item' href='#'><i class='fa-solid fa-address-card iconcolor'></i> Editar perfil</a></li>
+                <li><a class='dropdown-item' href='userprofileedit.php'><i class='fa-solid fa-address-card iconcolor'></i> Editar perfil</a></li>
                 <li><hr class='dropdown-divider'></li>
                 <p style='padding-left: 15px;'><i class='fa-solid fa-user-tag iconcolor'></i>";
                 if($_SESSION['role']=='ADMIN'){

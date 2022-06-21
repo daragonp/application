@@ -26,9 +26,11 @@ include "nowarning.php";
         if(password_verify($password, $fila['password']) && $filas==1){
             session_start();
             $_SESSION['userid']             =       $fila['userid'];
-            $_SESSION['email']              =       $fila['email'];
             $_SESSION['fullname']           =       $fila['fullname'];
-            $_SESSION['role']               =       $fila['role'];
+            $_SESSION['email']              =       $fila['email'];
+            $_SESSION['userphone']          =       $fila['userphone'];
+            $_SESSION['useraddress']        =       $fila['useraddress'];
+            $_SESSION['roleid']             =       $fila['roleid'];
             $_SESSION['usercreatedat']      =       $fila['usercreatedat'];
             
             /*echo "<script type='text/javascript'>

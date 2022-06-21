@@ -6,9 +6,13 @@
                     <i class='bx bx-grid-alt nav_icon'></i> 
                     <span class="nav_name">Dashboard</span> 
                 </a> 
-                <a href="#" class="nav_link"> 
+                <a href="userrole.php" class="nav_link"> 
+                    <i class='fa-solid fa-user-tag'></i>
+                    <span class="nav_name">Roles</span> 
+                </a> 
+                <a href="userlist.php" class="nav_link"> 
                     <i class='bx bx-user nav_icon'></i> 
-                    <span class="nav_name">Users</span> 
+                    <span class="nav_name">Usuarios</span> 
                 </a> 
                 <a href="#" class="nav_link"> 
                     <i class='bx bx-message-square-detail nav_icon'></i> 
